@@ -70,8 +70,8 @@ test.only("check box actions", async ({ page }) => {
     for(const i of indexs){
        await checkboxes[i].check();
        await expect(checkboxes[i]).toBeChecked();
-
     }
+
 
 })
 
