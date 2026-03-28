@@ -12,10 +12,13 @@ test("auto suggest dropdropdowns", async ({ page }) => {
     await page.waitForTimeout(5000);
 
     for(let i=0;i<count;i++){
-        console.log(await searchtext.nth(i).allTextContents());
+        const text=await searchtext.nth(i).innerText();
+        if(text==='SmartWatchesBoys'){
+           await searchtext.nth(i).click();
+            break;
+        }
     }
 
 
 
 })
-
